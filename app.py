@@ -8,6 +8,10 @@ import os
 from PIL import Image
 from flask_cors import CORS
 import numpy as np
+check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+
+
+check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 import cv2
 from base64 import b64encode
 import json
@@ -20,10 +24,7 @@ from subprocess import STDOUT, check_call
 import os
 app = Flask(__name__)
 CORS(app)
-check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 
-
-check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 
 check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
