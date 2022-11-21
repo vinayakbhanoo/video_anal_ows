@@ -12,6 +12,9 @@ check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 
 
 check_call(['apt-get', 'install', '-y', 'libgl1'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+
+check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 import cv2
 from base64 import b64encode
 import json
@@ -26,8 +29,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-check_call(['apt-get', 'install', '-y', 'libglib2.0-0'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
-check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
+
 
 check_call(['apt-get', 'install', '-y', 'python3-opencv'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 github='ultralytics/yolov5'
