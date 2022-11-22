@@ -30,9 +30,6 @@ app = Flask(__name__)
 CORS(app)
 
 
-
-
-check_call(['apt-get', 'install', '-y', 'python3-opencv'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 github='ultralytics/yolov5'
 torch.hub.list(github, trust_repo=True)
 model = torch.hub.load("ultralytics/yolov5", "yolov5s", force_reload=True) # no cases weight
