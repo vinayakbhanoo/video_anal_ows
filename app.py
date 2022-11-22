@@ -8,6 +8,8 @@ import os
 from PIL import Image
 from flask_cors import CORS
 import numpy as np
+from subprocess import STDOUT, check_call
+import os
 check_call(['apt-get', 'update'], stdout=open(os.devnull,'wb'), stderr=STDOUT)
 
 
@@ -21,10 +23,9 @@ import json
 import base64
 import torch
 from flask import Flask, render_template, request, redirect,jsonify
-from subprocess import STDOUT, check_call
 #from w3lib.url import parse_data_uri
 
-import os
+
 app = Flask(__name__)
 CORS(app)
 
