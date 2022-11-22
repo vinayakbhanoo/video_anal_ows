@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'ows-person-detection'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9AF3EEAA58654DAA85D082A448F24EA9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_12A5F61EFB69418C84D05959A91D79E9 }}
