@@ -65,6 +65,6 @@ jobs:
           app-name: 'ows-camera-api'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EC6D3B19625A42BB9522C492DD300979 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_03F632CC45CB4D33B31B972F8009FC62 }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
